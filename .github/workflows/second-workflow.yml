@@ -1,0 +1,16 @@
+name: Ma première Action
+on: [push]
+jobs:
+  Explorer-Actions-Github:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Cette tâche a été automatiquement déclenché par un événement ${{github.event_name}}."
+      - run: echo "Cette tâche s'exécute maintenat sur un serveur ${{runner.os}} hébergé par GitHub !"
+      - run: echo "Le nom de ma branche est ${{github.ref}} et mon dépôt est ${{github.repository}}."
+      - name: Récupérer le code du dépôt
+        uses: actions/checkout@v4
+      - run: echo "Ce workflow est maintenant prêt à tester mon code sur le runner !"
+      - name: Lister les fichiers du dépôt
+        run: |
+          ls ${{github.workspace}}
+      - run: echo "Le statut de cette tâche est ${{job.status}}."
