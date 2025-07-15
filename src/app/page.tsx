@@ -10,7 +10,7 @@ type Question = {
 
 export default function Home() {
   // const [currentIndex, setCurrentIndex] = useState(250);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(300);
   const [selected, setSelected] = useState<string | null>(null);
 
   const question: Question = questions[currentIndex];
