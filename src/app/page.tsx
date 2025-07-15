@@ -63,7 +63,7 @@ export default function Home() {
               onClick={() => !selected && setSelected(answer)}
               style={style}
             >
-              {answer}Test
+              {answer}
             </div>
           );
         })}
